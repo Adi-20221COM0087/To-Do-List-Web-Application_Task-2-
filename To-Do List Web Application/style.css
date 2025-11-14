@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eef2f3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 40px;
+    transition: background 0.3s;
+}
+
+body.dark {
+    background: #1c1c1c;
+    color: white;
+}
+
+.container {
+    width: 450px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark .container {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔥 UPDATED INPUT GROUP (exactly like screenshot) */
+.input-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#taskInput {
+    width: 75%;         /* longer input bar */
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#addBtn {
+    padding: 12px 25px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#addBtn:hover {
+    background: #23923d;
+}
+
+#darkModeBtn {
+    padding: 12px 14px;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: grab;
+    transition: transform 0.2s, background 0.3s;
+}
+
+body.dark .task {
+    background: #3a3a3a;
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
+
+.task span {
+    flex-grow: 1;
+    cursor: text;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.edit { background: #007bff; }
+.delete { background: #dc3545; }
+.complete { background: #17a2b8; }
